@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var topics = ["labrador retrievers", "german shepherd", "french bulldogs", "golden retrievers", "rottweilers", "poodles", "bulldogs", "dachshunds"];
+    var topics = ["labrador retrievers", "german shepherd", "french bulldogs", "golden retrievers", "rottweilers", "poodles", "bulldogs", "dachshunds", "pug"];
 
     function displayBreedGif() {
         var breed = $(this).attr("data-name");
@@ -30,7 +30,7 @@ $(document).ready(function () {
                 img.attr("alt", "dog gif");
                 img.attr("data-state", "still")
                 img.attr("data-still", gifUrl);
-                img.attr("data-amimate", gifUrlAnimate);
+                img.attr("data-animate", gifUrlAnimate);
 
                 var caption = $("<figcaption class='figure-caption'>");
 
@@ -76,6 +76,7 @@ $(document).ready(function () {
         var breed = $("#breed-input").val().trim();
         topics.push(breed);
         renderButtons();
+        $("#breed-input").val("");
     })
 
     $(document).on("click", ".btn", displayBreedGif);
