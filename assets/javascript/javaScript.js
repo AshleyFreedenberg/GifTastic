@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     function displayBreedGif() {
         var breed = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + breed + "&api_key=zNBZZJ2RtFXneRDIDVhJ8CSDtHISleX4&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + breed + "&api_key=zNBZZJ2RtFXneRDIDVhJ8CSDtHISleX4&limit=10";
 
         $("#gifSpot").empty();
 
